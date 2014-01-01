@@ -15,7 +15,8 @@ var defaultOptions = {
     ],
     nodeVersion: 'v0.10.24',
     concurrency: 2,
-    https: false
+    https: false,
+    excludeDirs: []
 };
 
 var rsync = require('rsyncwrapper').rsync;
@@ -74,7 +75,7 @@ module.exports = function (grunt) {
                 rsync({
                     ssh: true,
                     port: server.port,
-                    exclude: ['.git', 'node_modules'],
+                    exclude: _.union(['.git', 'node_modules'], options.excludeDirs),
                     syncDestIgnoreExcl: true,
                     args: ['--verbose', '--archive', '--compress'],
                     src: './',
