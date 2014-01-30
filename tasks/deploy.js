@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                 rsync({
                     ssh: true,
                     port: server.port,
-                    exclude: _.union(['.git/', 'node_modules/'], options.excludeDirs),
+                    exclude: _.union(['/var/www/*/working_dir/.git', '/var/www/*/working_dir/node_modules/'], options.excludeDirs),
                     include: options.includeDirs,
                     syncDestIgnoreExcl: true,
                     args: ['--verbose', '--archive', '--compress'],

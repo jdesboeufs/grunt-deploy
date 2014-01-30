@@ -1,6 +1,6 @@
 {
   "name": "grunt-deploy",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Deployment task for Node.js projects",
   "author": "Jérôme Desboeufs <jerome.desboeufs@isogeo.fr>",
   "private": true,
