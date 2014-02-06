@@ -13,7 +13,7 @@ var defaultOptions = {
             user: 'deploy'
         }
     ],
-    nodeVersion: 'v0.10.24',
+    nodeVersion: 'v0.10.25',
     concurrency: 2,
     https: false,
     excludeDirs: [],
