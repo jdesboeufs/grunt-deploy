@@ -29,6 +29,8 @@ var _ = require('underscore');
 module.exports = function (grunt) {
     grunt.registerMultiTask('deploy', 'Deploys project instances.', function () {
         var taskDone = this.async();
+        var nvmrc = grunt.file.read('.nvmrc');
+        if (nvmrc && nvmrc.length) defaultOptions.nodeVersion = nvmrc.trim();
         var options = this.options(defaultOptions);
         var data = this.data;
         var envVars = grunt.file.read(data.env) + 'PATH=$PATH:/opt/nvm/' + options.nodeVersion + '/bin\n';
