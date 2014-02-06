@@ -17,7 +17,8 @@ var defaultOptions = {
     concurrency: 2,
     https: false,
     excludeDirs: [],
-    includeDirs: []
+    includeDirs: [],
+    proxyingWebSockets: false
 };
 
 var rsync = require('rsyncwrapper').rsync;
