@@ -1,6 +1,6 @@
 'use strict';
 
-var defaultOptions = { 
+var defaultOptions = {
     servers: [
         {
             host: 'isogeo-node.cloudapp.net',
@@ -115,6 +115,7 @@ module.exports = function (grunt) {
                 grunt.log.writeln(server.port + ':npm-install');
                 var commands = [
                     'cd /var/www/' + data.projectName + '/working_dir',
+                    '/opt/nvm/' + options.nodeVersion + '/bin/npm config set ca ""',
                     '/opt/nvm/' + options.nodeVersion + '/bin/npm install --production'
                 ];
                 conn.exec(commands.join(' && '), function(err, stream) {
@@ -122,7 +123,7 @@ module.exports = function (grunt) {
                         if (code !== 0) return stepDone(new Error('Error in npmInstall'));
                         stepDone();
                     });
-                }); 
+                });
             };
 
             var upstartScript = function(stepDone) {
