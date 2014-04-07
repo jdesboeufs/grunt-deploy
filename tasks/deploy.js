@@ -1,18 +1,7 @@
 'use strict';
 
 var defaultOptions = {
-    servers: [
-        {
-            host: 'isogeo-node.cloudapp.net',
-            port: 1022,
-            user: 'deploy'
-        },
-        {
-            host: 'isogeo-node.cloudapp.net',
-            port: 2022,
-            user: 'deploy'
-        }
-    ],
+    servers: [],
     nodeVersion: 'v0.10.25',
     concurrency: 2,
     https: false,

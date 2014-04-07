@@ -2,8 +2,8 @@
   "name": "grunt-deploy",
   "version": "0.1.7",
   "description": "Deployment task for Node.js projects",
-  "author": "Jérôme Desboeufs <jerome.desboeufs@isogeo.fr>",
-  "private": true,
+  "author": "Jérôme Desboeufs <jerome.desboeufs@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "ssh2": "~0.2.15",
     "rsyncwrapper": "0.0.19",
