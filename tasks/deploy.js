@@ -2,7 +2,7 @@
 
 var defaultOptions = {
     servers: [],
-    nodeVersion: 'v0.10.25',
+    nodeVersion: 'v0.10.26',
     concurrency: 2,
     https: false,
     excludeDirs: [],
